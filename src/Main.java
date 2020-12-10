@@ -25,7 +25,6 @@ public class Main {
         int counter1,counter2;
         counter1 = counter2 = 0;
         long time = 0;
-
         while (true) {
             DbxClientV2 client1 = new DbxClientV2(config, ACCESS_TOKEN_SOUND);
             JavaSoundRecorder recorder = new JavaSoundRecorder(client1, 10000);
