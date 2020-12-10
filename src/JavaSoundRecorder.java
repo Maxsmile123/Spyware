@@ -117,7 +117,7 @@ public class JavaSoundRecorder
         };
         thread.start();
     }
-    int getMilliseconds(){
+    public int getMilliseconds(){
         return milliseconds;
     }
 }

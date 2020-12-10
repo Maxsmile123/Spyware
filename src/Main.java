@@ -14,10 +14,8 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        String ACCESS_TOKEN_SOUND = "sl.AnKUhXk0BgCkmZzIhCd-RAow2AUzvVLMsdOfQ3nJrWdxZ2l0Ewg2jSfx2vrpBOY8DoZPen34VFyRQRgD" +
-                "9bej34Mz3iZ71VTl7YZwtYNl68aQrgK51083MjEWJopRsDGYk8ZuJQQ";
-        String ACCESS_TOKEN_SCREEN = "sl.AnK8UmhI-033GI3gG5jiLjsv_YV1xLV-i6DEl_ivSF5SdIinI8Jmy59CHKxQqtz5lOTmrnlzovWoq5G" +
-                "-w-l1-KF_mreXSlf0S6DIz4jcgmLzGg_-hB6ky7ckeocxGpfwDs6cYuI";
+        String ACCESS_TOKEN_SOUND = "3L_WwvKD2X4AAAAAAAAAAasOXKR9X-iOZKcisMKh7n124TM2Z87kFfN1z5JYfwrY";
+        String ACCESS_TOKEN_SCREEN = "4Oy8XNGN3QwAAAAAAAAAAUMmM2ync3xQADM2TwEuTUiLtEAPTRpxPMEsrgEhtZJa";
 
 
         DbxRequestConfig config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build();
@@ -39,7 +37,7 @@ public class Main {
                 thread.start();
                 counter1++;
             }
-            if(time - (11000*counter2) >= 11000){
+            if(time - (11500*counter2) >= 11500){
                 recorder.recordAudio();
                 counter2++;
             }
