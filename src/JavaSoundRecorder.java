@@ -15,7 +15,7 @@ public class JavaSoundRecorder
     TargetDataLine line;
     DbxClientV2 client;
     AudioFormat format;
-    private int milliseconds = 0;
+    private int milliseconds;
 
     public JavaSoundRecorder(DbxClientV2 client, int milliseconds)
     {
@@ -115,9 +115,4 @@ public class JavaSoundRecorder
         thread.start();
     }
 
-
-    public int getMilliseconds()
-    {
-        return milliseconds;
-    }
 }
