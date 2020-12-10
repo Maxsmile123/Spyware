@@ -66,7 +66,7 @@ public class JavaSoundRecorder
     }
 
 
-    void start(File file)
+    private void start(File file)
     {
         Thread thread = new Thread(){
             @Override
@@ -88,7 +88,7 @@ public class JavaSoundRecorder
     }
 
 
-    void stop(int milliseconds, File file, String soundName)
+    private void stop(int milliseconds, File file, String soundName)
     {
         Thread thread = new Thread(){
             @Override
