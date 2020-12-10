@@ -3,6 +3,7 @@ import com.dropbox.core.v2.DbxClientV2;
 import javax.sound.sampled.*;
 import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -104,20 +105,19 @@ public class JavaSoundRecorder
                     InputStream is = new FileInputStream(file);
                     client.files().uploadBuilder("/"+ soundName + ".wav")
                             .uploadAndFinish(is);
+                    is.close();
+                    file.delete();
                 } catch (Exception ex) {
                     ex.printStackTrace();
-                }
-                if (file.exists()) {
-                    file.delete();
-                } else {
-                    System.err.println(
-                            "I cannot find '" + file + "' ('" + file.getAbsolutePath() + "')");
                 }
             }
         };
         thread.start();
     }
-    public int getMilliseconds(){
+
+
+    public int getMilliseconds()
+    {
         return milliseconds;
     }
 }
