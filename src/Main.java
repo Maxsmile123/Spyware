@@ -37,7 +37,7 @@ public class Main {
                 thread.start();
                 counter1++;
             }
-            if(time - (31000*counter2) >= 31000){
+            if(time - (30700*counter2) >= 30700){
                 recorder.recordAudio();
                 counter2++;
             }
