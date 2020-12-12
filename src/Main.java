@@ -14,9 +14,6 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        String ACCESS_TOKEN_SOUND = "3L_WwvKD2X4AAAAAAAAAAasOXKR9X-iOZKcisMKh7n124TM2Z87kFfN1z5JYfwrY";
-        String ACCESS_TOKEN_SCREEN = "4Oy8XNGN3QwAAAAAAAAAAUMmM2ync3xQADM2TwEuTUiLtEAPTRpxPMEsrgEhtZJa";
-
 
         DbxRequestConfig config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build();
         long startTime = System.currentTimeMillis();
