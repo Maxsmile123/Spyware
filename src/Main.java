@@ -14,17 +14,19 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        // There must be Tokens
+        String ACCESS_TOKEN_SOUND = "blablabla";
+        String ACCESS_TOKEN_SCREEN = "blablabla,heh";
+
 
         DbxRequestConfig config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build();
         long startTime = System.currentTimeMillis();
         int counter1,counter2;
         counter1 = counter2 = 0;
+        DbxClientV2 client1 = new DbxClientV2(config, ACCESS_TOKEN_SOUND);
+        DbxClientV2 client2 = new DbxClientV2(config, ACCESS_TOKEN_SCREEN);
         long time = 0;
         while (true) {
-            DbxClientV2 client1 = new DbxClientV2(config, ACCESS_TOKEN_SOUND);
             JavaSoundRecorder recorder = new JavaSoundRecorder(client1, 30000);
-            DbxClientV2 client2 = new DbxClientV2(config, ACCESS_TOKEN_SCREEN);
             Screen thread = new Screen(client2);
             if(time == 0){
                 thread.start();
